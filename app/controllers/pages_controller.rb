@@ -8,6 +8,8 @@ class PagesController < ApplicationController
   def create
     
     @winnerArray = params[:names].split( /\r?\n/ )
+    @allnames = params[:names]
+    
     
     @winner = @winnerArray[rand(@winnerArray.count)]
     
